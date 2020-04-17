@@ -9,17 +9,17 @@
 <li><b>Official website: </b><a href="https://www.rukovoditel.net/">Rukovoditel.net</a></li>
 <li><b>Documentation: </b><a href="https://docs.rukovoditel.net/">Official Rukovoditel documentation</a></li>
 <h1>How to use this image</h1>
-<li><b>First: </b>You need a Docker network;</a>
-<li><b>Second: </b>You need a database container;</a>
-<li><b>Third: </b>You need a Rukovoditel container;</a>
+<li><b>First: </b>You need a Docker network - see Creating the Network;</a>
+<li><b>Second: </b>You need a database container - see Creating the Database Container;</a>
+<li><b>Third: </b>You need a Rukovoditel container - see Creating the Rukovoditel Container;</a>
 <p>All database data and all Rukovoditel files will be placed in separate Docker volumes (automatically created)
-<h2>Creating network:</h2>
+<h2>Creating the Network:</h2>
 <p>Create local Docker network:</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker network create some-network</pre></div>
-<h2>Creating database container:</h2>
+<h2>Creating the Database Container:</h2>
 <p>Create MariaDB database container and Docker volume to store data:</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker run -d --rm --name some-mariadb --network some-netvork --mount 'type=volume,source=some-volume,destination=/var/lib/mysql' -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_USER=some-user -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=rukovoditel mariadb</pre></div>
-<h2>Creating Rukovoditel container:</h2>
+<h2>Creating the Rukovoditel Container:</h2>
 <p>Create Rukovoditel container, Docker volume to store Rukovoditel data and connect it to network:</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker run -dit --rm --name some-rukovoditel --network some-network --mount 'type=volume,source=some-volume,destination=/var/www/html' -p 80:80 filipmil/rukovoditel</pre></div>
 <h2>Removing install folder:</h2>
