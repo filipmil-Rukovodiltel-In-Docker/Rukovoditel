@@ -3,12 +3,11 @@
 <h1>Supported tags and respective <code>Dockerfile</code> links</h1>
 <li><a href="https://github.com/filipmil-Rukovodiltel-In-Docker/Rukovoditel/blob/master/Dockerfile"><code>latest</code></a></li>
 <h1>Quick reference</h1>
-<h1>Quick reference</h1>
-<li><b>Where to get help: </b><a href="https://forum.rukovoditel.net">Rukovoditel forum</a>
-</li><li><b>Official website: </b><a href="https://www.rukovoditel.net/">Rukovoditel.net</a></li>
-</li><li><b>Documentation: </b><a href="https://docs.rukovoditel.net/">Official Rukovoditel documentation</a></li>
+<li><b>Where to get help: </b><a href="https://forum.rukovoditel.net">Rukovoditel forum</a></li>
+<li><b>Where to file issues: </b><a href="https://github.com/filipmil-Rukovodiltel-In-Docker/Rukovoditel/issues">https://github.com/filipmil-Rukovodiltel-In-Docker/Rukovoditel/issues</a></li>
+<li><b>Official website: </b><a href="https://www.rukovoditel.net/">Rukovoditel.net</a></li>
+<li><b>Documentation: </b><a href="https://docs.rukovoditel.net/">Official Rukovoditel documentation</a></li>
 <h1>How to use this image</h1>
-
 <li><b>First: </b>You need a Docker network;</a>
 <li><b>Second: </b>You need a database container;</a>
 <li><b>Third: </b>You need a Rukovoditel container;</a>
