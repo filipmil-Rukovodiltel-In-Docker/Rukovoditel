@@ -40,6 +40,13 @@
 <h2>Port Mapping</h2>
 <p>If you'd like to be able to access the instance from the host without the container's IP, standard port mappings can be used. Just add -p 80:80 to the docker run arguments and then access either http://localhost or http://host-ip in a browser. If your hosts port 80 is used, use some other port. 
 Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can access app either with http://localhost:8080 or http://host-ip:8080 in a browser.</p>
+<h2>Backing up and restoring data<h2>
+<h3>Creating database dumps</h3>
+<p>Most of the normal tools will work, although their usage might be a little convoluted in some cases to ensure they have access to the mysqld server. A simple way to ensure this is to use docker exec and run the tool from the same container, similar to the following:</p>
+<code>$ docker exec some-mariadb sh -c 'exec mysqldump -user some-user --password --lock-tables --databases some-db-name' > /some/path/on/your/host/some-db-name.sql</code>
+<h3>Restoring data from dump files</h3>
+<p>For restoring data. You can use docker exec command with -i flag, similar to the following:</p>
+<code>$ docker exec -i some-mariadb sh -c 'exec mysql -user some-user --password' < /some/path/on/your/host/some-db-name.sql</code>
 <h1>License</h1>
 <p><a href="https://www.rukovoditel.net/download.php">Rukovoditel</a> is open source and released under the terms of the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"> GNU General Public License v2 (GPL).</a> <a href="https://tldrlegal.com/license/gnu-general-public-license-v2">Quick GPL-2.0 Summary.</a></p>
 <p>Main version of <a href="https://www.rukovoditel.net/download.php">Rukovoditel</a>  is free and  fully functional software without any restrictions. <a href="https://www.rukovoditel.net/extension.php">Extension</a>  is commercial product and it is not included in this image.</p>
