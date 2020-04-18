@@ -19,7 +19,6 @@
 <p>Create local Docker network:</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker network create some-network</pre></div>
 <h2>Creating the Database Container:</h2>
-<p>Before creating any containers you need a common netwok for web server and database containers to communicate on.</p>
 <p>To manage data, you need a database and to store data you need a permanet storage. In this case these are MariaDB and Docker Volume. You may chose different database, MySql for example or to store data in host machine folder.</p>
 <p>Create MariaDB database container and Docker volume to store data:</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker run -d --rm --name some-mariadb --network some-netvork --mount 'type=volume,source=some-volume,destination=/var/lib/mysql' -e MYSQL_ROOT_PASSWORD=root-secret -e MYSQL_USER=some-user -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=some-db-name mariadb</pre></div>
