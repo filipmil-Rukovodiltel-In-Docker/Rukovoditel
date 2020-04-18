@@ -9,6 +9,7 @@
 <li><b>Official website: </b><a href="https://www.rukovoditel.net/">Rukovoditel.net</a></li>
 <li><b>Documentation: </b><a href="https://docs.rukovoditel.net/">Official Rukovoditel documentation</a></li>
 <h1>How to use this image</h1>
+<p>To use Rukovoditel you need a web server with Rukovoditel website, a database, storage for your data and a way to connect those. so you need two container.</p>
 <li><b>First: </b>You need a Docker network - see Creating the Network;</a>
 <li><b>Second: </b>You need a database container - see Creating the Database Container;</a>
 <li><b>Third: </b>You need a Rukovoditel container - see Creating the Rukovoditel Container;</a>
