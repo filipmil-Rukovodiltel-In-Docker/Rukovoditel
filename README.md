@@ -46,7 +46,7 @@ Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can ac
 <p>For restoring data. You can use docker exec command with -i flag, similar to the following:</p>
 <code>$ docker exec -i some-mariadb sh -c 'exec mysql -user some-user --password' < /some/path/on/your/host/some-db-name.sql</code>
 <h2>... via <a href="https://github.com/docker/compose">docker-compose</a></h2>
-  ```
+```
   version: '3'
   services:
         rukovoditel:
