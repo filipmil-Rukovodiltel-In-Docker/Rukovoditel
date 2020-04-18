@@ -15,6 +15,7 @@
 <li><b>Third: </b>You need a Rukovoditel container - see Creating the Rukovoditel Container;</a>
 <p>All database data and all Rukovoditel files will be placed in separate Docker volumes. Volumes are created at first start of the theirs respective container and serves as <b>permanent</b> storage for the database and Rukovoditel files. After stopping the containers, your data remans safe in those volumes. For backing up the data in volumes - see Backing Up Data.</p>
 <h2>Creating the Network:</h2>
+<p>Before creating any containers you need a common netwok for web server and database containers to communicate on.</p>
 <p>Create local Docker network:</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker network create some-network</pre></div>
 <h2>Creating the Database Container:</h2>
