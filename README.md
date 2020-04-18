@@ -1,5 +1,3 @@
-<h1>This page is under construction!!!</h1>
-<p>Rukovoditel is free Open Source Project Management developed by Sergey Kharchishin</p>
 <h1>Supported tags and respective <code>Dockerfile</code> links</h1>
 <li><a href="https://github.com/filipmil-Rukovodiltel-In-Docker/Rukovoditel/blob/master/Dockerfile"><code>2.6.1 latest</code></a></li>
 <h1>Quick reference</h1>
