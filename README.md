@@ -24,8 +24,16 @@
 <div class="highlight highlight-text-shell-session"><pre>$ docker run -d --rm --name some-mariadb --network some-netvork --mount 'type=volume,source=some-volume,destination=/var/lib/mysql' -e MYSQL_ROOT_PASSWORD=root-secret -e MYSQL_USER=some-user -e MYSQL_PASSWORD=secret -e MYSQL_DATABASE=some-db-name mariadb</pre></div>
 <p>...where <code>some-mariadb</code> is the name for your database container. Example <code>rukovoditeldb</code>. <code>some-network</code> is the name for your network. Network must be created before use. Example <code>rukovoditelnet</code>. <code>some-volume</code> is the name of Docker volume for storing database data. Example <code>rukovoditeldbvol</code>. <code>root-secret</code> is database root user password. <code>some-user</code> is username for Rukovoditel database system account. Example: <code>ruser</code>. <code>secret</code> is Rukovoditel account database password. <code>some-db-name</code> is the name of database for Rukovoditel data. Example: <code>rukovoditel</code>.</p>
 <h2>Creating the Rukovoditel Container:</h2>
+<p>Finaly, when networka and database are in place, yoy can spin up Rukovodiel instance.</p>
 <p>Create Rukovoditel container, Docker volume to store Rukovoditel data and connect it to network:</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker run -dit --rm --name some-rukovoditel --network some-network --mount 'type=volume,source=some-volume,destination=/var/www/html' -p 80:80 filipmil/rukovoditel</pre></div>
+<p>...where <code>some-rukovoditel</code> is the name for your Rukovoditel web server container. Example <code>rukovoditelweb</code>. <code>some-network</code> is the name for your network, it must be the same network with database container in order for those two to communicate. <code>some-volume</code> is the name of Docker volume for storing website. Example <code>rukovoditelwebvol</code>.</p>
+<p>On the first run, Rukovoditel must be installed. To connect with database use:
+<li>For database user name: <code>some-user</code> you used in creating database container</li>
+<li>For database password: <code>secret</code> you used in creating database container</li>
+<li>For database name: <code>some-db-name</code> you used in creating database container</li>
+<li>For database port: blank or 3306</li></p>
+<p>After installation, remove install folder.</p>
 <h2>Removing install folder:</h2>
 <p>To remove install folder AFTER installation of Rukovoditel run this command::</p>
 <div class="highlight highlight-text-shell-session"><pre>$ docker exec some-rukovoditel /bin/bash rm -r /var/www/html/install</pre></div>
