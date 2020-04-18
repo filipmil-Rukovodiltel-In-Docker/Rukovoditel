@@ -46,7 +46,7 @@ Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can ac
 <p>For restoring data. You can use docker exec command with -i flag, similar to the following:</p>
 <code>$ docker exec -i some-mariadb sh -c 'exec mysql -user some-user --password' < /some/path/on/your/host/some-db-name.sql</code>
 <h2>... via <a href="https://github.com/docker/compose">docker-compose</a><h2>
-  ...
+  ```
   version: '3'
   services:
         rukovoditel:
@@ -75,7 +75,7 @@ Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can ac
         RukovoditelDB:
   networks:
         RukovoditelNET:
-...
+```
 <h1>License</h1>
 <p><a href="https://www.rukovoditel.net/download.php">Rukovoditel</a> is open source and released under the terms of the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"> GNU General Public License v2 (GPL).</a> <a href="https://tldrlegal.com/license/gnu-general-public-license-v2">Quick GPL-2.0 Summary.</a></p>
 <p>Main version of <a href="https://www.rukovoditel.net/download.php">Rukovoditel</a>  is free and  fully functional software without any restrictions. <a href="https://www.rukovoditel.net/extension.php">Extension</a>  is commercial product and it is not included in this image.</p>
