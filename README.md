@@ -44,9 +44,9 @@ Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can ac
 <div class="highlight highlight-text-shell-session"><pre>$ docker exec some-mariadb sh -c 'exec mysqldump -user some-user --password --lock-tables --databases some-db-name' > /some/path/on/your/host/some-db-name.sql</pre>
 <h3>Restoring data from dump files</h3>
 <p>For restoring data. You can use docker exec command with -i flag, similar to the following:</p>
-<code>$ docker exec -i some-mariadb sh -c 'exec mysql -user some-user --password' < /some/path/on/your/host/some-db-name.sql</code>
+<div class="highlight highlight-text-shell-session"><pre>$ docker exec -i some-mariadb sh -c 'exec mysql -user some-user --password' < /some/path/on/your/host/some-db-name.sql</pre>
 <h2>... via <a href="https://github.com/docker/compose">docker-compose</a></h2>
-<code>version: '3'<br>
+<div class="highlight highlight-text-shell-session"><pre>version: '3'<br>
 &#9;  services:</br>
 &#9;&#9;        rukovoditel:</br>
 &#9;&#9;&#9;                image: filipmil/rukovoditel</br>
@@ -73,7 +73,7 @@ Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can ac
 &#9;&#9;        RukovoditelWEB:</br>
 &#9;&#9;        RukovoditelDB:</br>
 &#9;  networks:</br>
-&#9;&#9;        RukovoditelNET:</code></br>
+&#9;&#9;        RukovoditelNET:</pre></br>
 <h1>License</h1>
 <p><a href="https://www.rukovoditel.net/download.php">Rukovoditel</a> is open source and released under the terms of the <a href="https://www.gnu.org/licenses/old-licenses/gpl-2.0.html"> GNU General Public License v2 (GPL).</a> <a href="https://tldrlegal.com/license/gnu-general-public-license-v2">Quick GPL-2.0 Summary.</a></p>
 <p>Main version of <a href="https://www.rukovoditel.net/download.php">Rukovoditel</a>  is free and  fully functional software without any restrictions. <a href="https://www.rukovoditel.net/extension.php">Extension</a>  is commercial product and it is not included in this image.</p>
