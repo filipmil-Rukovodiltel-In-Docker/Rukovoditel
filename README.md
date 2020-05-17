@@ -47,8 +47,8 @@ Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can ac
 <div class="highlight highlight-text-shell-session"><pre>$ docker exec -i some-mariadb sh -c 'exec mysql -user some-user --password' < /some/path/on/your/host/some-db-name.sql</pre>
 <h2>... via <a href="https://github.com/docker/compose">docker-compose</a></h2>
 <div class="highlight highlight-text-shell-session"><pre>version: '3'<br>
-&#9;  services:</br>
-&#9;&#9;        rukovoditel:</br>
+  services:
+        rukovoditel:
 &#9;&#9;&#9;                image: filipmil/rukovoditel</br>
 &#9;&#9;&#9;                volumes: </br>
 &#9;&#9;&#9;&#9;                        - RukovoditelWEB:/var/www/html</br>
