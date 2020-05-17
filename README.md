@@ -41,7 +41,7 @@ Example: -p 8080:80 will map containers port 80 to hosts port 8080 so you can ac
 <h2>Backing up and restoring data</h2>
 <h3>Creating database dumps</h3>
 <p>Most of the normal tools will work, although their usage might be a little convoluted in some cases to ensure they have access to the mysqld server. A simple way to ensure this is to use docker exec and run the tool from the same container, similar to the following:</p>
-<code>$ docker exec some-mariadb sh -c 'exec mysqldump -user some-user --password --lock-tables --databases some-db-name' > /some/path/on/your/host/some-db-name.sql</code>
+<div class="highlight highlight-text-shell-session"><pre>$ docker exec some-mariadb sh -c 'exec mysqldump -user some-user --password --lock-tables --databases some-db-name' > /some/path/on/your/host/some-db-name.sql</pre>
 <h3>Restoring data from dump files</h3>
 <p>For restoring data. You can use docker exec command with -i flag, similar to the following:</p>
 <code>$ docker exec -i some-mariadb sh -c 'exec mysql -user some-user --password' < /some/path/on/your/host/some-db-name.sql</code>
