@@ -1,5 +1,5 @@
-<h1>Repository moved to <li><a href="https://github.com/filipmilasinovic/RukovoditelInDocker">filipmilasinovic /
-RukovoditelInDocker</li> </h1>
+<h1>Repository moved to <a href="https://github.com/filipmilasinovic/RukovoditelInDocker">filipmilasinovic /
+  RukovoditelInDocker</a> </h1>
 
 <h1>Supported tags and respective <code>Dockerfile</code> links</h1>
 <li><a href="https://github.com/filipmil-Rukovodiltel-In-Docker/Rukovoditel/blob/master/Dockerfile"><code>2.7.Beta2 latest</code></a></li>
